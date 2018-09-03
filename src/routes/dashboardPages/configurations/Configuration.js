@@ -1,31 +1,21 @@
-import React, { PropTypes } from 'react';
+import React, { Component  } from 'react';
 import Well from 'react-bootstrap/lib/Well';
+import {datetimepicker} from 'react-bootstrap' ;
 
-import {
-  Panel,
-  Button,
-  Col,
-  PageHeader,
-  ControlLabel,
-  FormControl,
-  HelpBlock,
-  FormGroup,
-  Checkbox,
-  Form,
-  Radio,
-  InputGroup,
-  Glyphicon } from 'react-bootstrap';
+import {Panel,Button,Col,PageHeader,ControlLabel,  FormControl,  HelpBlock,  FormGroup,  Checkbox,
+  Form,  Radio,  InputGroup,  Glyphicon } from 'react-bootstrap';
 
+  class Configuration extends Component  {
 
+    constructor(props) {
+      super(props) ;
+      this.state = {
+        title : "Configuration" ,
+      } ;
+    }
 
-
-  const title = 'Configuration';
-  var DateTimeField = require('react-bootstrap-datetimepicker') ;
-  function showmodel () {
-    console.log("model");
-  }
-  function displayDeclaration(props, context) {
-    context.setTitle(title);
+  //  var DateTimeField = require('react-bootstrap-datetimepicker') ;
+    render () {}
     return (
       <div>
         <div className="col-lg-12">
@@ -69,7 +59,7 @@ import {
           </Panel>
 
           <Panel header={<span> Optimisation DB </span>} >
-          <DateTimeField mode="time"/>
+            <datetimepicker mode="time"/>
             <FormGroup>
               <Button type="submit">Submit Button</Button>
               {'  '}
@@ -82,6 +72,6 @@ import {
       </div>
     );
   }
+}
 
-  displayDeclaration.contextTypes = { setTitle: PropTypes.func.isRequired };
-  export default displayDeclaration;
+export default Configuration;

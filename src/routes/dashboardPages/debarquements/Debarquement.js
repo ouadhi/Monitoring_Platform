@@ -1,20 +1,22 @@
-import React, { PropTypes } from 'react';
+import React  , {Component} from 'react' ;
 import Button from 'react-bootstrap/lib/Button';
 import Panel from 'react-bootstrap/lib/Panel';
 import Pagination from 'react-bootstrap/lib/Pagination';
 import PageHeader from 'react-bootstrap/lib/PageHeader';
 import Well from 'react-bootstrap/lib/Well';
 
+class Debarquement extends Component  {
 
-const title = 'Debarquement';
+  constructor(props) {
+    super (props)  ;
+    this.state = {
+      title : "Debarequement" ,
+    } ;
 
-function showmodel () {
-  console.log("model");
-}
+  }
 
+render (){
 
-function displayDeclaration(props, context) {
-  context.setTitle(title);
   return (
     <div>
       <div className="col-lg-12">
@@ -229,6 +231,6 @@ function displayDeclaration(props, context) {
     </div>
   );
 }
+}
 
-displayDeclaration.contextTypes = { setTitle: PropTypes.func.isRequired };
-export default displayDeclaration;
+export default Debarquement;

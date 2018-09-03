@@ -35,7 +35,7 @@ class Sidebar extends Component {
               </div>
             </li>
             */}
-            
+
              {/*
             <li>
               <a href="" onClick={(e) => { e.preventDefault(); history.push('/'); }} >
@@ -47,7 +47,7 @@ class Sidebar extends Component {
              {/* Home  page  */}
             <li>
               <a href="" onClick={(e) => { e.preventDefault(); history.push('/'); }} >
-                <i className="fa fa-dashboard fa-fw" /> &nbsp;Home
+                <i className="fa fa-home fa-fw" /> &nbsp;Home
               </a>
             </li>
 
@@ -159,21 +159,19 @@ class Sidebar extends Component {
               </a>
             </li>
 
-             {/* Utlisateur  */}
+             {/* Utilisateur  */}
              <li>
               <a href="" onClick={(e) => { e.preventDefault(); history.push('/user'); }} >
                 <i className="fa fa-dashboard fa-fw" /> &nbsp;utilisateur
               </a>
             </li>
 
-
-
-
-
-
-
-
-
+            {/* Configuration  */}
+            <li>
+             <a href="" onClick={(e) => { e.preventDefault(); history.push('/configuration'); }} >
+               <i className="fa fa-dashboard fa-fw" /> &nbsp;Configuration
+             </a>
+           </li>
 
             <li className={classNames({ active: !this.state.chartsElementsCollapsed })}>
               <a
@@ -362,12 +360,14 @@ class Sidebar extends Component {
                     collapse: this.state.samplePagesCollapsed,
                   })}
               >
+
                 <li>
                   <a href="" onClick={(e) => { e.preventDefault(); history.push('/blank'); }} >
                     Blank
                   </a>
                 </li>
                 <li>
+
                   <a href="" onClick={(e) => { e.preventDefault(); history.push('/login'); }} >
                     Login
                   </a>
@@ -380,6 +380,7 @@ class Sidebar extends Component {
             </li>
           </ul>
         </div>
+        
       </div>
     );
   }

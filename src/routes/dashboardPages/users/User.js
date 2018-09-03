@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component } from 'react';
 import Button from 'react-bootstrap/lib/Button';
 import Panel from 'react-bootstrap/lib/Panel';
 import Pagination from 'react-bootstrap/lib/Pagination';
@@ -6,15 +6,17 @@ import PageHeader from 'react-bootstrap/lib/PageHeader';
 import Well from 'react-bootstrap/lib/Well';
 
 
-const title = 'Utilisateur';
+class  User extends Component {
+  constructor(props) {
+    super(props) ;
+    this.state= {
+      title : 'Utilisateur' ,
+    }
+  }
 
-function showmodel () {
-  console.log("model");
-}
 
-
-function displayManifest(props, context) {
-  context.setTitle(title);
+render () {
+  
   return (
     <div>
       <div className="col-lg-12">
@@ -182,6 +184,6 @@ function displayManifest(props, context) {
     </div>
   );
 }
+}
 
-displayManifest.contextTypes = { setTitle: PropTypes.func.isRequired };
-export default displayManifest ;
+export default User ;

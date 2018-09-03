@@ -35,6 +35,7 @@ function displayMorrisjsCharts(props, context) {
 
       <div className="row">
         <div className="col-lg-6">
+
           <Panel header={<span>Area Chart Example</span>} >
             <div>
               <ResponsiveContainer width="100%" aspect={2}>

@@ -24,6 +24,7 @@ import parc from './dashboardPages/parcvisites';
 import sortie from './dashboardPages/sorties';
 import log from './dashboardPages/Logs';
 import user from './dashboardPages/users';
+import configuration from './dashboardPages/configurations';
 import forms from './dashboardPages/forms';
 import grid from './dashboardPages/grid';
 import icons from './dashboardPages/icons';
@@ -80,6 +81,8 @@ export default [
       sortie ,
       log,
       user ,
+      configuration , 
+
       // place new routes before...
       // content,
       error,
